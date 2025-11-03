@@ -15,9 +15,9 @@ dotenv.config()
 mongooseConnect();
 const app = express();
 const key = process.env.JWT_SECRET;
-const FRONTEND_URL = process.env.FRONTEND_URL
+// const FRONTEND_URL = process.env.FRONTEND_URL
 app.use(cors({
-  origin: FRONTEND_URL,
+  origin: "https://tenant-frontend-teal.vercel.app",
   credentials: true
 }));
 app.use(express.urlencoded({ extended: true }))
