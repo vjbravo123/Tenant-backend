@@ -17,7 +17,7 @@ const app = express();
 const key = process.env.JWT_SECRET;
 // const FRONTEND_URL = process.env.FRONTEND_URL
 app.use(cors({
-  origin: "https://tenant-frontend-teal.vercel.app",
+  origin: "*",
   credentials: true
 }));
 app.use(express.urlencoded({ extended: true }))
