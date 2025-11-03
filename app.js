@@ -23,12 +23,12 @@ app.use(cors({
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cookieParser());
-app.use("/api/auth", AuthRoutes);
-app.use("/api/notes", NotesRoutes);
-app.use("/api/users", UserRoutes);
-app.use("/api/admin", AdminRoutes)
+app.use("/auth", AuthRoutes);
+app.use("/notes", NotesRoutes);
+app.use("/users", UserRoutes);
+app.use("/admin", AdminRoutes)
 //health
-app.get("/api/health", (req,res) => {
+app.get("/health", (req,res) => {
   res.json({ status: "ok" });
 })
 app.use((req, res, next) => {
