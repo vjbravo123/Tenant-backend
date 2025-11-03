@@ -17,7 +17,7 @@ const app = express();
 const key = process.env.JWT_SECRET;
 const FRONTEND_URL = process.env.FRONTEND_URL
 app.use(cors({
-  origin: ["http://localhost:5173", FRONTEND_URL],
+  origin: ["https://tenant-frontend-teal.vercel.app", FRONTEND_URL],
   credentials: true
 }));
 app.use(express.urlencoded({ extended: true }))
